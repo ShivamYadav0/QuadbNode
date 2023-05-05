@@ -63,7 +63,7 @@ app.get("/api/top-10-tickers-from-db", async (req, res) => {
     res.send(top10Tickers);
   } catch (error) {
     console.error(error);
-    res.status(500).send("Error fetching top 10 tickers from database!");
+    res.status(500).send("Error fetching top 10 tickers from database!",err,process.env.DATABASE);
   }
 });
 app.get("/*", (req, res) => {
