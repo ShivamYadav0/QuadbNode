@@ -1,15 +1,14 @@
 const express = require("express");
 const mongoose = require("mongoose");
 const axios = require("axios");
-require("dotenv").config();
 const { join } = require("path");
 const app = express();
-
+require("dotenv").config();
 // MongoDB connection
 async function conn() {
   try {
     mongoose.connect(
-      process.env.DATABASE,
+      "mongodb+srv://shivamyadav98939294:iGk2ZHCCULShnfE9@cluster0.cqcdlaq.mongodb.net/?retryWrites=true&w=majority",
       {
         useNewUrlParser: true,
         useUnifiedTopology: true,
