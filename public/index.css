@@ -126,6 +126,7 @@ tr th:first-child {
   gap: 15px;
   margin-bottom: 20px;
   font-size: 20px;
+  flex-wrap:wrap;
 }
 
 .row-1 {
@@ -134,6 +135,7 @@ tr th:first-child {
   flex-direction: row;
   justify-content: center;
   width: 100%;
+  flex-wrap:wrap;
 }
 .row-1 > div {
   display: flex;
@@ -143,12 +145,14 @@ tr th:first-child {
   gap: 20px;
   padding: 5px;
   align-items: center;
+  flex-wrap:wrap;
 }
 .row-3 {
   display: flex;
   flex-direction: row;
   width: 100%;
   justify-content: space-between;
+  flex-wrap:wrap;
 }
 .row-3 > div {
   display: flex;
@@ -159,6 +163,7 @@ tr th:first-child {
   padding: 5px;
   font-size: 35px;
   align-items: center;
+  
 }
 .theme {
   position: relative;
@@ -181,7 +186,10 @@ button select {
   border-radius: 100%;
 }
 .share-price {
-  transform: scale(2.1);
+ font-size: 70px;
+}
+.row-4 {
+  text-align: center;
 }
 .select button {
   border-radius: 6px;
@@ -212,7 +220,10 @@ button select {
 .text-color-plus {
   color: #5dc7c2;
 }
+.fiat-logo{
+  width: 200px;
 
+}
 .text-color-minus {
   color: var(--text-moon-2);
 }

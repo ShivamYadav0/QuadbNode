@@ -79,9 +79,9 @@ async function getData() {
  <p>${rdata.name}<br/><span class="top-font">Name</span></p>
   `;
   let top1 = document.createElement("div");
-  top1.classList.add("share-price");
+  
   top1.innerHTML = `
- <p>${Number.parseFloat(mx * 100).toFixed(
+ <p class="share-price">${Number.parseFloat(mx * 100).toFixed(
    4
  )}%<br/><span class="top-font">Profit%</span></p>
   `;
