@@ -1,0 +1,282 @@
+:root {
+  --bg-sun: white;
+  --bg-moon: #191d28;
+  --text-sun: black;
+  --text-moon: #fff;
+  --text-sun-2: #333;
+  --text-moon-2: #ddd;
+  --table-sun: #555;
+  --table-moon: #2c2c2c;
+  --table-sun-hover: rgba(105, 105, 105, 0.3);
+  --table-moon-hover: rgba(255, 255, 255, 0.3);
+  --tr-color-plus: rgba(55, 255, 55, 1);
+  --tr-color-minus: rgba(255, 55, 55, 1);
+}
+[data-theme="light"] {
+  --bg-moon: white;
+  --tr-color-plus: hsl(131, 100%, 36%);
+  --tr-color-minus: rgba(255, 20, 0, 1);
+  --text-moon: black;
+  --text-moon-2: #333;
+  --table-moon: #999999;
+  --table-moon-hover: rgba(105, 105, 105, 0.3);
+}
+
+.addpluscolor {
+  color: var(--tr-color-plus);
+}
+.addminuscolor {
+  color: var(--tr-color-minus);
+}
+body {
+  background-color: var(--bg-moon);
+  font-family: Arial, sans-serif;
+}
+table {
+  width: 90%;
+  border-collapse: collapse;
+  margin: 10px auto;
+  /* box-shadow: 0 0 20px rgba(0, 0, 0, 0.15); */
+  overflow-x: auto;
+}
+th,
+td {
+  padding: 7px;
+  text-align: center;
+  flex: 1 1;
+  color: var(--text-moon);
+  margin: 5px;
+}
+
+thead tr {
+  background-color: var(--table-moon);
+}
+tbody tr:hover {
+  background-color: var(--table-moon-hover);
+}
+/* CSS for glassmorphism effect */
+.glass {
+  /* background-color: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.18);
+    padding: 20px;
+    margin-bottom: 30px; */
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  overflow-x: auto;
+}
+tr {
+  background-color: var(--table-moon-hover);
+  display: flex;
+  justify-content: space-between;
+  margin: 10px;
+  border-radius: 20px;
+}
+.glass h1 {
+  color: var(--text-moon);
+  text-align: center;
+  margin-bottom: 20px;
+}
+tr td:first-child {
+  position: relative;
+  width: min-content;
+  margin-left: 20px;
+  flex: 0 0;
+}
+tr th:first-child {
+  position: relative;
+  width: min-content;
+  margin-left: 20px;
+  flex: 0 0;
+}
+/* CSS for responsive design */
+@media screen and (max-width: 1024px) {
+  table {
+    font-size: 12px;
+    width: max-content;
+  }
+  th,
+  td {
+    padding: 10px;
+  }
+}
+
+/* Top */
+.top-font {
+  color: var(--text-moon-2);
+  font-size: 10px;
+  display: flex;
+  justify-content: center;
+  height: min-content;
+}
+.container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  color: var(--text-moon);
+  justify-content: center;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 20px;
+}
+
+.row-1 {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  width: 100%;
+}
+.row-1 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1 1;
+  gap: 20px;
+  padding: 5px;
+  align-items: center;
+}
+.row-3 {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+}
+.row-3 > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex: 1 1;
+  gap: 30px;
+  padding: 5px;
+  font-size: 35px;
+  align-items: center;
+}
+.theme {
+  position: relative;
+  border-radius: 30px;
+  background: gray;
+  display: flex;
+  width: 65px;
+  height: 33px;
+}
+button select {
+  border: none;
+  border-color: white;
+  outline: none;
+}
+#timer {
+  border: 3px solid gray;
+  padding: 5px;
+  text-align: center;
+  width: 25px;
+  border-radius: 100%;
+}
+.share-price {
+  transform: scale(2.1);
+}
+.select button {
+  border-radius: 6px;
+}
+
+.slider {
+  position: absolute;
+  content: "";
+  height: 25px;
+  cursor: pointer;
+  width: 25px;
+  right: 4px;
+  bottom: 4px;
+  border-radius: 100%;
+  transition: 0.4s;
+  background: #5dc7c2;
+}
+
+#telegram {
+  background: #5dc7c2;
+  border-radius: 10px;
+  padding: 10px;
+}
+.telegram-logo {
+  width: 20px;
+  margin: auto;
+}
+.text-color-plus {
+  color: #5dc7c2;
+}
+
+.text-color-minus {
+  color: var(--text-moon-2);
+}
+
+.loader {
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: transparent;
+  --blue: #007bff;
+  --indigo: #6610f2;
+  --purple: #6f42c1;
+  --pink: #e83e8c;
+  --red: #dc3545;
+  --orange: #fd7e14;
+  --yellow: #ffc107;
+  --green: #28a745;
+  --teal: #20c997;
+  --cyan: #17a2b8;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #007bff;
+  --secondary: #6c757d;
+  --success: #28a745;
+  --info: #17a2b8;
+  --warning: #ffc107;
+  --danger: #dc3545;
+  --light: #f8f9fa;
+  --dark: #343a40;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif,
+    "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  color: #fff;
+  font-family: Oswald, sans-serif;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 0 auto;
+  border-radius: 50%;
+  border: 16px solid #ddd;
+  border-top-color: #3dc6c1;
+  width: 120px;
+  height: 120px;
+  animation: spin 2s linear infinite;
+}
+@keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(1turn);
+    transform: rotate(1turn);
+  }
+}
+.load {
+  visibility: hidden;
+}
